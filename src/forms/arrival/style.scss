@@ -1,0 +1,7 @@
+div.form.arrival {
+  display: none;
+
+  &.show {
+    display: block;
+  }
+}
