@@ -1,0 +1,42 @@
+div.navbar {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+  gap: 4px;
+  margin: 0;
+  padding: 8px;
+  border-bottom: 1px solid #777;
+  height: 32px;
+  overflow: hidden;
+
+  @media print {
+    display: none !important;
+  }
+
+  button {
+    padding: 5px 10px;
+    border: 1px solid #aaa;
+    background: #eee;
+    cursor: pointer;
+    color: #333;
+
+    &:first-child {
+      border-bottom-left-radius: 8px;
+      border-top-left-radius: 8px;
+    }
+
+    &:last-child {
+      border-bottom-right-radius: 8px;
+      border-top-right-radius: 8px;
+    }
+
+    &.active {
+      background: #74aeff;
+      border-color: #333;
+      color: #000;
+    }
+  }
+}
