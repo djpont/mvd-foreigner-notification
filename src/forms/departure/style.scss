@@ -23,6 +23,16 @@ div.form.departure {
     margin: 10mm 0 0 158mm;
   }
 
+  &.page2 {
+    > div.intro {
+      margin: 15mm 0 0 158mm;
+    }
+
+    > div.breakLine {
+      margin-top: 0;
+    }
+  }
+
   > div.header {
     margin: 7.5mm 0 2.5mm;
     display: flex;
@@ -39,7 +49,7 @@ div.form.departure {
     display: flex;
     flex-direction: column;
     flex-wrap: nowrap;
-    margin: 0 22mm 1.5mm;
+    margin: 0 21.8mm 1.5mm;
 
     > div.title {
       display: flex;
@@ -111,6 +121,205 @@ div.form.departure {
       }
     }
 
+    &.topic5 {
+      .organization2,
+      .organization3 {
+        display: flex;
+        justify-content: flex-end;
+      }
+
+      .organization3 {
+        justify-content: space-between;
+
+        span {
+          text-align: center;
+        }
+      }
+
+      .organizationAddress {
+        align-items: flex-start;
+
+        span {
+          text-align: center;
+        }
+      }
+
+      .organizationAddress2 {
+        justify-content: flex-end;
+      }
+
+      .documentTitle {
+        padding-left: 11mm;
+      }
+
+      .documentWrapper {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        margin-top: 0;
+
+        .left {
+          display: flex;
+          flex-direction: column;
+          align-items: stretch;
+
+          > div {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: nowrap;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 1.6mm;
+
+            span {
+              font-size: 2.5mm;
+              text-align: center;
+            }
+          }
+
+          > .documentType {
+            span {
+              flex: 1
+            }
+          }
+
+          > .documentSeriesAndNumber {
+            padding-right: 4.4mm;
+
+            > span:first-child {
+              width: 18.5mm;
+            }
+          }
+
+          > .dateSubtitle {
+            margin-bottom: 0;
+          }
+
+          > .documentStartDate {
+            padding-left: 9mm;
+            padding-right: 38.5mm;
+          }
+
+          > .documentExpiredDate {
+            padding-right: 11mm;
+            margin-bottom: 0;
+
+            > span:first-child {
+              font-weight: bold;
+              width: 34mm;
+            }
+          }
+
+          > .documentAdditional {
+            margin-bottom: 0;
+          }
+
+          > .signatureWrapper {
+            align-items: flex-start;
+
+            > span:first-child {
+              font-weight: bold;
+              width: 50mm;
+            }
+
+            > div.signature {
+              display: flex;
+              flex-direction: column;
+              flex-wrap: nowrap;
+
+              div.square {
+                height: 11.8mm;
+                width: 56.5mm;
+                border: 0.5px solid #000;
+              }
+            }
+
+          }
+        }
+
+        .right {
+          display: flex;
+          flex-direction: column;
+          flex-wrap: nowrap;
+          width: 56.1mm;
+
+          .square {
+            height: 51mm;
+            border: 0.5px solid #000;
+            margin-top: 0.5mm;
+          }
+
+          span {
+            font-size: 2.5mm;
+            text-align: center;
+          }
+        }
+      }
+    }
+
+    &.topic6 {
+      margin-bottom: 0;
+
+      > div.subheader {
+        display: flex;
+        text-align: center;
+        justify-content: center;
+        margin: 0.9mm 0;
+      }
+
+      > div {
+        margin-bottom: 0.8mm;
+
+        &.name {
+          display: flex;
+          align-items: flex-start;
+
+          span {
+            text-align: center;
+          }
+        }
+
+        &.dateAndSignature {
+          align-items: flex-start;
+          margin-bottom: 0;
+
+          .date {
+            display: flex;
+            justify-content: space-between;
+            flex-direction: row;
+            flex-wrap: nowrap;
+            align-items: center;
+            flex: 1;
+
+            span {
+              font-size: 2.5mm;
+            }
+          }
+
+          .space {
+            width: 54mm;
+          }
+
+          .signature {
+            display: flex;
+            flex-direction: column;
+            flex-wrap: nowrap;
+            align-items: center;
+
+            .square {
+              height: 10.8mm;
+              width: 55.5mm;
+              border: 0.5px solid #000;
+            }
+
+            span {
+              font-size: 2.5mm;
+            }
+          }
+        }
+      }
+    }
+
     > div {
       display: flex;
       flex-direction: row;
@@ -123,6 +332,16 @@ div.form.departure {
       &.district,
       &.address {
         margin-top: 1.6mm;
+      }
+
+      &.address {
+        padding-right: 22mm;
+      }
+
+      &.phone {
+        span:first-child {
+          padding-right: 13mm;
+        }
       }
 
       > div.space3 {
@@ -153,6 +372,19 @@ div.form.departure {
             font-size: 2.5mm;
             padding-left: 78mm;
           }
+
+          //&.documentExpired {
+          //
+          //  > span:nth-child(4) {
+          //    width: 22.4mm;
+          //    text-align: center;
+          //  }
+          //
+          //  > span:nth-child(6) {
+          //    width: 13.4mm;
+          //    text-align: center;
+          //  }
+          //}
 
           > span {
             font-size: 2.5mm;
