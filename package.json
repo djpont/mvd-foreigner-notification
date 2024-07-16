@@ -9,7 +9,6 @@
     "build:dev": "webpack --mode=development",
     "watch": "webpack --watch",
     "serve": "webpack serve",
-    "test": "jest",
     "lint": "eslint . --ext .ts",
     "prettier": "prettier --write ."
   },
@@ -23,7 +22,6 @@
   },
   "devDependencies": {
     "@babel/preset-typescript": "7.22.11",
-    "@types/jest": "29.5.4",
     "css-loader": "6.8.1",
     "eslint": "8.48.0",
     "eslint-config-prettier": "9.0.0",
