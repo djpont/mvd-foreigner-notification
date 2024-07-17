@@ -20,7 +20,9 @@ div.form.arrival {
   }
 
   &.page1,
-  &.page2 {
+  &.page2,
+  &.page3,
+  &.page4 {
     > div.topic {
       display: flex;
       flex-direction: column;
@@ -70,18 +72,15 @@ div.form.arrival {
     }
 
     > div.topic {
-
       > div {
         margin-bottom: 1mm;
 
         span {
-
         }
       }
 
       &.topic1 {
         > div {
-
           span {
           }
         }
@@ -128,7 +127,7 @@ div.form.arrival {
         }
 
         > .documentType {
-          span:nth-child(1){
+          span:nth-child(1) {
             width: 9mm;
           }
         }
@@ -163,7 +162,7 @@ div.form.arrival {
         > .visaTypeTitle {
           display: flex;
           flex-direction: column;
-          gap:1mm;
+          gap: 1mm;
         }
 
         > .visaType {
@@ -220,9 +219,7 @@ div.form.arrival {
     }
   }
 
-
   &.page2 {
-
     > div {
       display: flex;
       flex-direction: row;
@@ -236,7 +233,6 @@ div.form.arrival {
       }
     }
 
-
     > div.intro {
       margin: 5.9mm 0 0 114mm;
       font-size: 3.5mm;
@@ -248,7 +244,7 @@ div.form.arrival {
     > div.requisites,
     > div.actualLocation,
     > div.cadastral {
-      display:flex;
+      display: flex;
       flex-direction: row;
       flex-wrap: nowrap;
       justify-content: space-between;
@@ -264,7 +260,7 @@ div.form.arrival {
         display: flex;
         flex-direction: column;
         flex-wrap: nowrap;
-        gap:1mm;
+        gap: 1mm;
       }
     }
 
@@ -341,7 +337,6 @@ div.form.arrival {
     }
 
     > div.roomFooter {
-
       span {
         font-size: 3.28mm;
       }
@@ -355,7 +350,7 @@ div.form.arrival {
       padding-left: 47mm;
 
       span {
-        font-size:3.2mm;
+        font-size: 3.2mm;
       }
     }
 
@@ -420,6 +415,209 @@ div.form.arrival {
     }
   }
 
+  &.page3 {
+    > div {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: nowrap;
+      justify-content: space-between;
+      align-items: flex-start;
+      margin-bottom: 1mm;
+
+      span {
+        font-size: 3.5mm;
+        line-height: 4.7mm;
+      }
+    }
+
+    > .header3 {
+      margin-top: 5.5mm;
+      text-align: center;
+      font-size: 3.5mm;
+      font-weight: bold;
+      margin-left: 43.5mm;
+      margin-bottom: 0;
+    }
+
+    > .subheader {
+      margin-top: 0;
+      margin-left: 6.5mm;
+      margin-bottom: 0;
+
+      span {
+        font-size: 3.2mm;
+        text-align: center;
+        line-height: 4mm;
+      }
+    }
+
+    > .receivingParty {
+      span {
+        font-size: 3.15mm;
+      }
+    }
+
+    > .documentTitle {
+      margin-top: -1mm;
+      margin-bottom: 0;
+      justify-content: center;
+    }
+
+    > .datesTitles {
+      padding: 0 41mm 0 22mm;
+      margin-bottom: 0;
+    }
+
+    > .dates {
+      padding-right: 16.8mm;
+      margin-bottom: 0;
+
+      > .space {
+        width: 8mm;
+      }
+    }
+
+    > .datesFooter {
+      padding-left: 78mm;
+      margin-top: -1mm;
+
+      span {
+        font-size: 3.2mm;
+      }
+    }
+
+    > .locationTitle {
+      justify-content: center;
+      margin-top: -1.6mm;
+    }
+
+    > .region,
+    > .placeOfBirth {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: nowrap;
+      justify-content: space-between;
+      margin-top: -1mm;
+
+      span {
+        margin-top: -1mm;
+        font-size: 3.5mm;
+        line-height: 4.5mm;
+      }
+
+      .lines {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        gap: 1mm;
+      }
+    }
+
+    > .area,
+    > .street {
+      margin-top: -1mm;
+    }
+
+    > .city {
+      span {
+        margin-top: -1mm;
+      }
+    }
+
+    > .address {
+      padding-right: 16.8mm;
+      margin-bottom: 0;
+    }
+
+    > .confirmedThatTitle {
+      margin: 0;
+
+      span {
+        font-size: 3.3mm;
+      }
+    }
+
+    > .citizenship {
+      align-items: center;
+
+      span {
+        margin-top: -1mm;
+      }
+    }
+
+    > .birthdayAndSex {
+      align-items: center;
+      padding-right: 16.8mm;
+      margin-bottom: 0;
+
+      span:nth-child(1) {
+        text-align: left;
+        width: 21.5mm;
+      }
+    }
+
+    > .establishedTitle {
+      margin-top: -1.5mm;
+
+      span {
+        font-size: 3.25mm;
+      }
+    }
+
+    > .region {
+      margin-top: 0;
+    }
+
+    > .street {
+      margin-top: -1.5mm;
+    }
+
+    > .address {
+      padding-right: 5.5mm;
+
+      > span:nth-child(1) {
+        text-align: center;
+        width: 31mm;
+      }
+    }
+
+    > .addressSubtitle {
+      margin-top: -1mm;
+      span {
+        font-size: 3.2mm;
+      }
+    }
+
+    > .address2 {
+      margin-top: -1mm;
+      justify-content: flex-start;
+
+      span {
+        width: 47mm;
+        text-align: center;
+      }
+    }
+
+    > .datesTitles5 {
+      margin-top: -2mm;
+      padding-left: 10mm;
+    }
+
+    > .dates5 {
+      width: 89mm;
+    }
+
+    > .footer {
+      flex-direction: column;
+      align-items: center;
+
+      span {
+        font-size: 3.2mm;
+        font-weight: bold;
+      }
+    }
+  }
+
   div.charsWrapper {
     display: inline-flex;
     flex-direction: row;
@@ -439,7 +637,9 @@ div.form.arrival {
     flex-wrap: nowrap;
     align-items: center;
     gap: 3mm;
-    margin: 1.7mm 22mm 0;
+    margin-left: -2mm;
+    margin-right: -2mm;
+    margin-bottom: -1mm;
 
     div.lines {
       flex: 1;
@@ -448,7 +648,8 @@ div.form.arrival {
     }
 
     span {
-      font-size: 2.5mm;
+      font-size: 3.2mm;
+      font-weight: bold;
     }
   }
 }
