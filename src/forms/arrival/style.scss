@@ -1,7 +1,243 @@
 div.form.arrival {
   display: none;
+  margin: 0;
+  width: 210mm;
+  height: 297mm;
+  overflow: hidden;
+  border: 1px solid #dacccc;
+  //font-family: Arial, serif;
+  font-family: 'Times New Roman', serif;
+  font-size: 2.5mm;
+  padding: 0 22mm;
+  white-space: nowrap;
 
   &.show {
-    display: block;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: stretch;
+    justify-content: flex-start;
+  }
+
+  &.page1 {
+    > div.intro1 {
+      margin: 5.5mm 0 0 129.7mm;
+      font-size: 3.2mm;
+      line-height: 4.1mm;
+    }
+
+    > div.intro2 {
+      margin: 1mm 0 0 129.7mm;
+      font-size: 2.75mm;
+      line-height: 3.4mm;
+    }
+
+    > div.intro3 {
+      margin: 5.4mm 0 0 149.4mm;
+      font-size: 3.9mm;
+      line-height: 3.4mm;
+      font-weight: bold;
+    }
+
+    > div.header {
+      margin: 5.3mm 0 0 20mm;
+      font-size: 3.93mm;
+      line-height: 4.9mm;
+      font-weight: bold;
+    }
+
+    > div.topic {
+      display: flex;
+      flex-direction: column;
+      flex-wrap: nowrap;
+      align-items: stretch;
+
+      > div {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: space-between;
+        align-items: flex-start;
+        margin-bottom: 1mm;
+
+        span {
+          font-size: 3.5mm;
+          line-height: 4.7mm;
+        }
+      }
+
+      &.topic1 {
+        > div {
+
+          span {
+          }
+        }
+
+        > .title {
+          margin: 3.5mm 0 4.3mm 2.8mm;
+          font-size: 3.5mm;
+          line-height: 4.9mm;
+          font-weight: bold;
+        }
+
+        > .patronymic {
+          margin-bottom: 0;
+        }
+
+        > .citizenship {
+          margin-bottom: 2mm;
+        }
+
+        > .BirthdayAndSex {
+          padding-right: 16mm;
+        }
+
+        > .placeOfBirth {
+          display: flex;
+          flex-direction: row;
+          flex-wrap: nowrap;
+          margin-bottom: 0;
+
+          > .lines {
+            display: flex;
+            flex-direction: column;
+            gap: 1mm;
+          }
+        }
+      }
+
+      &.topic2 {
+        > .title {
+          margin: 0 0 0.5mm 55mm;
+          font-size: 3.2mm;
+          line-height: 3.2mm;
+          font-weight: bold;
+        }
+
+        > .documentType {
+          span:nth-child(1){
+            width: 9mm;
+          }
+        }
+
+        > .datesTitles {
+          padding: 0 41mm 0 22mm;
+          margin-bottom: 0;
+
+          &.datesTitles3 {
+            padding-right: 37mm;
+            //margin-bottom: 1mm;
+          }
+
+          span {
+            line-height: 3.9mm;
+          }
+        }
+
+        > .dates {
+          padding-right: 17mm;
+        }
+
+        > .datesFooter {
+          padding-left: 73mm;
+
+          span {
+            font-size: 3mm;
+            line-height: 3mm;
+          }
+        }
+
+        > .visaTypeTitle {
+          display: flex;
+          flex-direction: column;
+          gap:1mm;
+        }
+
+        > .visaType {
+          padding-right: 14mm;
+
+          span {
+            text-align: center;
+          }
+        }
+
+        > .visaSeriesAndNumber {
+          padding-right: 44mm;
+        }
+
+        > .purposeOfEntry {
+          padding-right: 16.9mm;
+
+          span:nth-child(1) {
+            width: 37.7mm;
+          }
+        }
+
+        > .purposeOfEntry2AndPhone {
+          padding-left: 15mm;
+        }
+
+        > .migrationCard {
+          padding-right: 22.6mm;
+
+          span:nth-child(1) {
+            width: 44mm;
+          }
+        }
+
+        > .legalRepresentatives {
+          display: flex;
+          flex-direction: row;
+          flex-wrap: nowrap;
+          margin-bottom: 0;
+
+          > .lines {
+            display: flex;
+            flex-direction: column;
+            gap: 1mm;
+
+            span {
+              font-size: 3.1mm;
+              padding-left: 11.5mm;
+              padding-top: 4mm;
+            }
+          }
+        }
+      }
+    }
+
+
+  }
+
+  div.charsWrapper {
+    display: inline-flex;
+    flex-direction: row;
+    gap: 1.2mm;
+
+    div.charBox {
+      width: 4.4mm;
+      height: 5.3mm;
+      border: 1.5px solid #000;
+      background: #fff;
+    }
+  }
+
+  div.breakLine {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+    gap: 3mm;
+    margin: 1.7mm 22mm 0;
+
+    div.lines {
+      flex: 1;
+      height: 0;
+      border-bottom: 0.7mm dashed #000;
+    }
+
+    span {
+      font-size: 2.5mm;
+    }
   }
 }
