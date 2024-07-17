@@ -618,6 +618,202 @@ div.form.arrival {
     }
   }
 
+  &.page4 {
+    padding: 0 27mm 0 21mm;
+
+    > div {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: nowrap;
+      justify-content: space-between;
+      align-items: flex-start;
+
+      span {
+        font-size: 3.5mm;
+        line-height: 4.7mm;
+      }
+
+      div.charsWrapper {
+        height: 5.2mm;
+        gap: 1.01mm;
+      }
+    }
+
+    > div.intro {
+      margin: 5.4mm 0 4mm 110.5mm;
+      font-size: 3.5mm;
+      line-height: 4.1mm;
+    }
+
+    > div.phone {
+      padding-right: 75.8mm;
+      margin-left: 1mm;
+      margin-bottom: 0.5mm;
+    }
+
+    > div.organization {
+      margin-left: 1mm;
+    }
+
+    > div.organizationAndINN {
+      margin-top: -0.5mm;
+      margin-bottom: 1.2mm;
+    }
+
+    > div.address {
+      span {
+        margin-top: 0.5mm;
+        margin-left: 2mm;
+      }
+    }
+
+    > div.address2 {
+      margin-top: 1.2mm;
+      flex-direction: column;
+      align-items: flex-end;
+      gap: 1.2mm;
+      margin-bottom: 2mm;
+    }
+
+    > div.accuracy {
+      flex-direction: row;
+      flex-wrap: nowrap;
+      justify-content: space-between;
+      align-items: flex-start;
+      margin-bottom: 2.7mm;
+
+      .sign {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        align-items: center;
+
+        span:nth-child(1) {
+          font-weight: bold;
+          text-align: center;
+          font-size: 3.1mm;
+          line-height: 4.25mm;
+          padding-left: 3.5mm;
+        }
+
+        span:nth-child(3) {
+          font-size: 3.1mm;
+          line-height: 4.25mm;
+          padding-left: 3mm;
+          text-align: center;
+          margin-top: 4mm;
+        }
+
+        .square {
+          width: 58.5mm;
+          margin-left: 11.5mm;
+          height: 13mm;
+          border: 1.5px solid #000;
+        }
+      }
+
+      .stamp {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        align-items: center;
+
+        .square {
+          width: 57.2mm;
+          height: 34.5mm;
+          border: 1.5px solid #000;
+        }
+
+        span {
+          font-size: 3.1mm;
+          line-height: 4.25mm;
+          text-align: center;
+        }
+      }
+    }
+
+    > div.header4 {
+      justify-content: center;
+      margin-top: 4mm;
+      margin-bottom: 0.5mm;
+
+      span {
+        text-align: center;
+        font-weight: bold;
+      }
+    }
+
+    > div.surname,
+    > div.name {
+      margin-bottom: 1.2mm;
+    }
+
+    > div.stamps2 {
+      display: flex;
+      margin-top: 2mm;
+
+      .left {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        align-items: flex-start;
+
+        .square {
+          width: 57.3mm;
+          height: 14mm;
+          border: 1.5px solid #000;
+
+          &:nth-child(3) {
+            height: 35mm;
+          }
+        }
+
+        span {
+          width: 57.3mm;
+          text-align: center;
+          padding-left: 1mm;
+          margin-bottom: 1mm;
+          font-size: 3mm;
+          line-height: 3.7mm;
+        }
+      }
+
+      .right {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        align-items: flex-end;
+
+        .square {
+          width: 88.3mm;
+          height: 41.5mm;
+          border: 1.5px solid #000;
+        }
+
+        span {
+          width: 88.3mm;
+          text-align: center;
+          padding-left: 1mm;
+          margin-bottom: 1mm;
+          font-size: 3mm;
+          line-height: 3.7mm;
+        }
+      }
+    }
+
+    > div.footer {
+      margin-top: 4mm;
+      padding-left: 9mm;
+
+      span {
+        text-align: center;
+        font-weight: bold;
+        font-size: 3.1mm;
+        line-height: 4mm;
+      }
+    }
+  }
+
   div.charsWrapper {
     display: inline-flex;
     flex-direction: row;
