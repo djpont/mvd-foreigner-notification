@@ -16,10 +16,12 @@ const save = () => {
   for (let i = 0; i < wrappers.length; i++) {
     const wrapper = wrappers[i];
     const input = inputs[i];
+    const index = wrappers.indexOf(wrapper);
     if (wrapper.children[wrapper.children.length - 1] === input || input.type === 'checkbox') {
       const text = input.type === 'checkbox' ? (input.checked ? '✓' : ' ') : input.value;
       const charBoxes = squaring(input.maxLength, text);
       wrapper.replaceChildren(...charBoxes);
+      localStorage.setItem(index.toString(), text);
     }
   }
 };
@@ -63,7 +65,12 @@ export const makeInputViewAsSquares = (element: HTMLInputElement) => {
   wrappers.push(charsWrapper);
   inputs.push(input);
 
-  const charBoxes = squaring(length);
+  const index = inputs.indexOf(input);
+  const value = localStorage.getItem(index.toString());
+  input.value = value;
+  if (value === '✓') input.checked = true;
+
+  const charBoxes = squaring(length, value || '');
 
   charsWrapper.append(...charBoxes);
 
