@@ -815,15 +815,40 @@ div.form.arrival {
   }
 
   div.charsWrapper {
+    position: relative;
     display: inline-flex;
     flex-direction: row;
     gap: 1.2mm;
+    cursor: pointer;
+
+    &:hover {
+      div.charBox {
+        background: #fff7e7;
+      }
+    }
 
     div.charBox {
       width: 4.4mm;
       height: 5.3mm;
       border: 1.5px solid #000;
       background: #fff;
+      text-align: center;
+      font-size: 3.7mm;
+      transition: background-color ease .2s;
+    }
+
+    input {
+      position: absolute;
+      left: 0;
+      top:0;
+      right: 0;
+      bottom: 0;
+      letter-spacing: 1mm;
+      padding-left: 0.5mm;
+      font-family: "Times New Roman", serif;
+      font-size: 3.6mm;
+      background: #ffefc8;
+      border: 1.5px solid #000;
     }
   }
 
