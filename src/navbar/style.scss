@@ -5,15 +5,26 @@ div.navbar {
   align-content: center;
   justify-content: center;
   align-items: center;
-  gap: 4px;
+  gap: 40px;
   margin: 0;
   padding: 8px;
   border-bottom: 1px solid #777;
-  height: 32px;
   overflow: hidden;
+  height: 32px;
 
   @media print {
     display: none !important;
+  }
+
+  > div {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: center;
+  }
+
+  span {
+    font-size: 3mm;
   }
 
   button {

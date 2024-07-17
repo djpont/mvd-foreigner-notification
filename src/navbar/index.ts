@@ -1,33 +1,58 @@
+import { TPages } from '@/typing';
 import template from './template.html';
 import './style.scss';
 
-const html = Object.assign(document.createElement('div'), { className: 'navbar' });
-html.innerHTML = template;
+export class Navbar {
+  private readonly _html: HTMLDivElement;
+  private readonly _pages: TPages;
+  private readonly _buttons: HTMLButtonElement[] = [];
 
-const callbacks = {
-  arrival: () => {},
-  departure: () => {},
-};
+  constructor(pages: TPages) {
+    this._html = Object.assign(document.createElement('div'), { className: 'navbar' });
+    this._html.innerHTML = template;
+    this._pages = pages;
 
-const setCallbacks = ({ arrival, departure }: { arrival: () => void; departure: () => void }) => {
-  callbacks.arrival = arrival;
-  callbacks.departure = departure;
-};
+    const arrivalButtons = Array.from(
+      this._html.querySelectorAll('.arrival .buttons button'),
+    ) as HTMLButtonElement[];
+    const departureButtons = Array.from(
+      this._html.querySelectorAll('.departure .buttons button'),
+    ) as HTMLButtonElement[];
+    arrivalButtons.forEach((btn, index) => {
+      this._buttons.push(btn);
+      btn.addEventListener('click', () => {
+        this._buttons.forEach(b => b.classList.remove('active'));
+        this.hideAllPages();
+        this.showPage(this._pages.arrival[index + 1]);
+        btn.classList.add('active');
+      });
+    });
+    departureButtons.forEach((btn, index) => {
+      this._buttons.push(btn);
+      btn.addEventListener('click', () => {
+        this._buttons.forEach(b => b.classList.remove('active'));
+        this.hideAllPages();
+        this.showPage(this._pages.departure[index + 1]);
+        btn.classList.add('active');
+      });
+    });
+  }
 
-const buttonArrival = <HTMLButtonElement>html.querySelector('button.arrival');
-const buttonDeparture = <HTMLButtonElement>html.querySelector('button.departure');
+  get html() {
+    return this._html;
+  }
 
-const clickButton = (button: HTMLButtonElement, callback: () => void) => {
-  [buttonArrival, buttonDeparture].forEach(btn => btn.classList.remove('active'));
-  callback();
-  button.classList.add('active');
-};
+  private showPage = (page: HTMLDivElement) => {
+    page.classList.add('show');
+  };
 
-buttonArrival.addEventListener('click', () => {
-  clickButton(buttonArrival, callbacks.arrival);
-});
-buttonDeparture.addEventListener('click', () => {
-  clickButton(buttonDeparture, callbacks.departure);
-});
-
-export const navbar = { html, setCallbacks };
+  private hideAllPages = () => {
+    Object.values(this._pages)
+      .map(ps => Object.values(ps))
+      .forEach(ps =>
+        ps.forEach(p => {
+          return p.classList.remove('show');
+        }),
+      );
+  };
+}
