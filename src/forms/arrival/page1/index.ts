@@ -2,7 +2,7 @@ import { makeInputViewAsSquares } from '@/utils';
 import template from './template.html';
 
 const page = <HTMLDivElement>(
-  Object.assign(document.createElement('div'), { className: 'form arrival page1 show' })
+  Object.assign(document.createElement('div'), { className: 'form arrival page1 ' })
 );
 page.innerHTML = template;
 
