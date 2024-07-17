@@ -19,6 +19,29 @@ div.form.arrival {
     justify-content: flex-start;
   }
 
+  &.page1,
+  &.page2 {
+    > div.topic {
+      display: flex;
+      flex-direction: column;
+      flex-wrap: nowrap;
+      align-items: stretch;
+
+      > div {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: space-between;
+        align-items: flex-start;
+
+        span {
+          font-size: 3.5mm;
+          line-height: 4.7mm;
+        }
+      }
+    }
+  }
+
   &.page1 {
     > div.intro1 {
       margin: 5.5mm 0 0 129.7mm;
@@ -47,22 +70,12 @@ div.form.arrival {
     }
 
     > div.topic {
-      display: flex;
-      flex-direction: column;
-      flex-wrap: nowrap;
-      align-items: stretch;
 
       > div {
-        display: flex;
-        flex-direction: row;
-        flex-wrap: nowrap;
-        justify-content: space-between;
-        align-items: flex-start;
         margin-bottom: 1mm;
 
         span {
-          font-size: 3.5mm;
-          line-height: 4.7mm;
+
         }
       }
 
@@ -205,8 +218,206 @@ div.form.arrival {
         }
       }
     }
+  }
 
 
+  &.page2 {
+
+    > div {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: nowrap;
+      justify-content: space-between;
+      align-items: flex-start;
+
+      span {
+        font-size: 3.5mm;
+        line-height: 4.7mm;
+      }
+    }
+
+
+    > div.intro {
+      margin: 5.9mm 0 0 114mm;
+      font-size: 3.5mm;
+      line-height: 4.1mm;
+    }
+
+    > div.previousAddress,
+    > div.region,
+    > div.requisites,
+    > div.actualLocation,
+    > div.cadastral {
+      display:flex;
+      flex-direction: row;
+      flex-wrap: nowrap;
+      justify-content: space-between;
+      margin-top: 5.3mm;
+      margin-bottom: 1mm;
+
+      span {
+        font-size: 3.5mm;
+        line-height: 4.5mm;
+      }
+
+      .lines {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        gap:1mm;
+      }
+    }
+
+    > div.previousAddress2 {
+      margin-left: -1.2mm;
+    }
+
+    > div.previousAddressFooter {
+      display: flex;
+      justify-content: center;
+
+      span {
+        font-size: 3.15mm;
+      }
+    }
+
+    > div.header2 {
+      text-align: center;
+      font-size: 3.5mm;
+      font-weight: bold;
+      margin-top: 0.7mm;
+      margin-left: 48mm;
+      margin-bottom: 1mm;
+    }
+
+    > div.region {
+      margin-top: 0;
+      margin-bottom: 0;
+
+      span {
+        margin-top: -1mm;
+      }
+    }
+
+    > div.area {
+      margin-top: -0.5mm;
+      margin-bottom: 1mm;
+    }
+
+    > div.city {
+      margin-bottom: -0.7mm;
+
+      span {
+        margin-top: -1mm;
+      }
+    }
+
+    > div.street {
+      margin-bottom: 1mm;
+    }
+
+    > div.address {
+      padding-right: 5.6mm;
+
+      > span:nth-child(1) {
+        text-align: center;
+        width: 36.6mm;
+      }
+    }
+
+    > div.possession > span {
+      font-size: 3.25mm;
+    }
+
+    > div.room {
+      justify-content: flex-end;
+      padding-right: 97.5mm;
+
+      span {
+        font-size: 3.3mm;
+        flex: 1;
+        text-align: center;
+      }
+    }
+
+    > div.roomFooter {
+
+      span {
+        font-size: 3.28mm;
+      }
+    }
+
+    > div.placeOfStay {
+      padding-right: 30.5mm;
+    }
+
+    > div.placeOfStayFooter {
+      padding-left: 47mm;
+
+      span {
+        font-size:3.2mm;
+      }
+    }
+
+    > div.requisites {
+      margin-top: 1mm;
+    }
+
+    > div.actualLocationTitle {
+      margin-top: -1mm;
+      padding-left: 57mm;
+      font-weight: bold;
+      font-size: 3mm;
+    }
+
+    > div.actualLocationSubtitle {
+      flex-direction: column;
+      flex-wrap: nowrap;
+      align-items: center;
+
+      span {
+        font-size: 3.2mm;
+      }
+    }
+
+    > div.actualLocation {
+      margin-top: 1mm;
+      margin-bottom: 0;
+
+      span {
+        margin-top: -1mm;
+      }
+    }
+
+    > div.cadastral {
+      margin-top: 1mm;
+
+      .lines {
+        padding-top: 3mm;
+      }
+    }
+
+    > div.signature {
+      display: flex;
+      flex-direction: column;
+      flex-wrap: nowrap;
+      align-items: flex-end;
+      padding-left: 50mm;
+      margin-top: -1.5mm;
+
+      .square {
+        border: 1.5px solid #000;
+        height: 40.2mm;
+        width: 82.7mm;
+      }
+
+      span {
+        width: 82.7mm;
+        font-size: 3.2mm;
+        line-height: 3.8mm;
+        text-align: center;
+      }
+    }
   }
 
   div.charsWrapper {
