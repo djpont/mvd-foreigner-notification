@@ -1,15 +1,21 @@
 div.form.arrival {
   display: none;
+  padding: 0 22mm;
   margin: 0;
   width: 210mm;
   height: 297mm;
-  overflow: hidden;
+  //overflow: hidden;
   border: 1px solid #dacccc;
-  //font-family: Arial, serif;
   font-family: 'Times New Roman', serif;
   font-size: 2.5mm;
-  padding: 0 22mm;
   white-space: nowrap;
+
+  @media print {
+    border: none;
+    //margin-top: -10mm;
+    //transform: scale(1.1) !important;
+    transform-origin: center top !important;
+  }
 
   &.show {
     display: flex;
@@ -524,7 +530,7 @@ div.form.arrival {
       }
     }
 
-    > .address {
+    > .address.address0 {
       padding-right: 16.8mm;
       margin-bottom: 0;
     }
@@ -574,6 +580,7 @@ div.form.arrival {
 
     > .address {
       padding-right: 5.5mm;
+      margin-bottom: 0;
 
       > span:nth-child(1) {
         text-align: center;
@@ -834,18 +841,18 @@ div.form.arrival {
       background: #fff;
       text-align: center;
       font-size: 3.7mm;
-      transition: background-color ease .2s;
+      transition: background-color ease 0.2s;
     }
 
     input {
       position: absolute;
       left: 0;
-      top:0;
+      top: 0;
       right: 0;
       bottom: 0;
       letter-spacing: 1mm;
       padding-left: 0.5mm;
-      font-family: "Times New Roman", serif;
+      font-family: 'Times New Roman', serif;
       font-size: 3.6mm;
       background: #ffefc8;
       border: 1.5px solid #000;

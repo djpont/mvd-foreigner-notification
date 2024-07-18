@@ -18,6 +18,7 @@ export class Navbar {
     const departureButtons = Array.from(
       this._html.querySelectorAll('.departure .buttons button'),
     ) as HTMLButtonElement[];
+
     arrivalButtons.forEach((btn, index) => {
       this._buttons.push(btn);
       btn.addEventListener('click', () => {
@@ -27,6 +28,7 @@ export class Navbar {
         btn.classList.add('active');
       });
     });
+
     departureButtons.forEach((btn, index) => {
       this._buttons.push(btn);
       btn.addEventListener('click', () => {
@@ -36,6 +38,10 @@ export class Navbar {
         btn.classList.add('active');
       });
     });
+
+    // Open first page
+    this.showPage(this._pages.arrival[1]);
+    arrivalButtons[0].classList.add('active');
   }
 
   get html() {

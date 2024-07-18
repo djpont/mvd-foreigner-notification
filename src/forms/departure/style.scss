@@ -4,12 +4,18 @@ div.form.departure {
   margin: 0;
   width: 210mm;
   height: 297mm;
-  overflow: hidden;
+  //overflow: hidden;
   border: 1px solid #dacccc;
-
   font-family: Arial, serif;
-
   font-size: 1mm;
+  white-space: nowrap;
+
+  @media print {
+    border: none;
+    //margin-top: -10mm;
+    //transform: scale(1.1) !important;
+    transform-origin: center top !important;
+  }
 
   &.show {
     display: flex;
@@ -21,6 +27,13 @@ div.form.departure {
     font-size: 2.7mm;
     line-height: 3.5mm;
     margin: 10mm 0 0 158mm;
+  }
+
+  &.page1 {
+    div.birthDate {
+      padding-right: 70.4mm;
+      padding-left: 20.9mm;
+    }
   }
 
   &.page2 {
@@ -416,18 +429,18 @@ div.form.departure {
       border: 0.5px solid #000;
       text-align: center;
       font-size: 3.7mm;
-      transition: background-color ease .2s;
+      transition: background-color ease 0.2s;
     }
 
     input {
       position: absolute;
       left: 0;
-      top:0;
+      top: 0;
       right: 0;
       bottom: 0;
       letter-spacing: 1mm;
       padding-left: 0.5mm;
-      font-family: "Times New Roman", serif;
+      font-family: 'Times New Roman', serif;
       font-size: 3.6mm;
       background: #ffefc8;
       border: 1.5px solid #000;
