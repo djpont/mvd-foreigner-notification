@@ -48,5 +48,9 @@ div.navbar {
       border-color: #333;
       color: #000;
     }
+
+    &:active {
+      background: #a8a4a4;
+    }
   }
 }

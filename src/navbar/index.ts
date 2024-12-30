@@ -2,12 +2,17 @@ import { TPages } from '@/typing';
 import template from './template.html';
 import './style.scss';
 
+type TCallbacks = {
+  copy: () => void;
+  paste: () => void;
+};
+
 export class Navbar {
   private readonly _html: HTMLDivElement;
   private readonly _pages: TPages;
   private readonly _buttons: HTMLButtonElement[] = [];
 
-  constructor(pages: TPages) {
+  constructor(pages: TPages, callbacks: TCallbacks) {
     this._html = Object.assign(document.createElement('div'), { className: 'navbar' });
     this._html.innerHTML = template;
     this._pages = pages;
@@ -37,6 +42,13 @@ export class Navbar {
         this.showPage(this._pages.departure[index + 1]);
         btn.classList.add('active');
       });
+    });
+
+    this._html.querySelector('.savedForms .buttons button.copy').addEventListener('click', () => {
+      callbacks.copy();
+    });
+    this._html.querySelector('.savedForms .buttons button.paste').addEventListener('click', () => {
+      callbacks.paste();
     });
 
     // Open first page
